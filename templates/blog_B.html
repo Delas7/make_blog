@@ -49,10 +49,11 @@
       <h1 class="display-4">
         Why I learn Full-Stack
       </h1>
-      <form>
+      <form action="/blog/set_email" method="post">
         <div class="form-row">
           <div class="col">
-            <input type="email" class="form-control" placeholder="email address">
+            <input type="email" class="form-control" name="user_email">
+            <input type="hidden" name="blog_id" value="B">
           </div>
           <div class="col">
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -131,16 +132,8 @@
       <div class="p-4 mb-3 bg-light rounded">
         <h4>About</h4>
         <p class="mb-0">
-          Dave Lee 라는 닉네임으로 활동하고 있는 현직 기획자 겸 개발자입니다. 서비스를 직접 만들고, IT 강의도 진행하며, 활동하고 있습니다.
-          <a href="https://www.fun-coding.org">잔재미코딩 (www.fun-coding.org)</a> 블로그 사이트도 운영 중입니다.
+          Flask를 이용한 ABTest를 구현한 페이지입니다.
         </p>
-      </div>
-
-      <div class="p-4">
-        <h4>SNS 채널</h4>
-        <ol class="list-unstyled">
-          <li><a href="#">유투브</a></li>
-        </ol>
       </div>
     </aside><!-- /.blog-sidebar -->
 

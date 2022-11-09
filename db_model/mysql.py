@@ -7,7 +7,7 @@ MYSQL_CONN = pymysql.connect(
     user='delas',
     passwd='0000',
     db='blog_db',
-    charset='utf-8'
+    charset='utf8'
 )
 
 def conn_mysqldb():

@@ -1,0 +1,12 @@
+데이터 베이스는 blog_db 로 한다
+
+CREATE DATABASE blog_db;
+
+blog_db 데이터 베이스 하위 테이블은 user_info 로 하고 다음 내용을 가진다
+
+CREATE TABLE user_info(
+USER_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+USER_EMAIL VARCHAR(100) NOT NULL,
+BLOG_ID CHAR(4),
+PRIMARY KEY(USER_ID)
+);

@@ -49,17 +49,23 @@
       <h1 class="display-4">
         Why I learn Full-Stack
       </h1>
-      <form action="/blog/set_email" method="post">
-        <div class="form-row">
-          <div class="col">
-            <input type="email" class="form-control" name="user_email">
-            <input type="hidden" name="blog_id" value="B">
+      <p class='lead mb-2'>
+        {% if user_email != null %}
+        {{ user_email}} 이메일 주소로 구독중입니다.
+        {% else %}
+        <form action="/blog/set_email" method="post">
+          <div class="form-row">
+            <div class="col">
+              <input type="email" class="form-control" name="user_email">
+              <input type="hidden" name="blog_id" value="B">
+            </div>
+            <div class="col">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </div>
-          <div class="col">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </div>
-      </form>
+        </form>
+      {% endif %}
+      </p>
     </div>
   </div>
 

@@ -49,17 +49,25 @@
       <h1 class="display-4">
         내가 풀스택을 익힌 이유
       </h1>
-      <form action="/blog/set_email" method="post">
-        <div class="form-row">
-          <div class="col">
-            <input type="email" class="form-control" name="user_email">
-            <input type="hidden" name="blog_id" value="A">
+
+      <p class='lead mb-2'>
+        {% if user_email != null %}
+        {{ user_email}} 이메일 주소로 구독중입니다.
+        {% else %}
+        이메일을 남겨주시면, 블로그 연재시 메일로 송부드립니다 &nbsp;
+        <form action="/blog/set_email" method="post">
+          <div class="form-row">
+            <div class="col">
+              <input type="email" class="form-control" name="user_email">
+              <input type="hidden" name="blog_id" value="A">
+            </div>
+            <div class="col">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </div>
-          <div class="col">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </div>
-      </form>
+        </form>
+      {% endif %}
+      </p>
     </div>
   </div>
 

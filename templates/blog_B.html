@@ -51,7 +51,8 @@
       </h1>
       <p class='lead mb-2'>
         {% if user_email != null %}
-        {{ user_email}} 이메일 주소로 구독중입니다.
+        {{ user_email}} 이메일 주소로 구독중입니다.&nbsp;
+        <a class="btn btn-light" href="/blog/logout" role="button">구독취소</a>
         {% else %}
         <form action="/blog/set_email" method="post">
           <div class="form-row">
